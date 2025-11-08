@@ -24,7 +24,7 @@ It provides a fully functional REST API supporting:
 | MySQL | 8+ | Relational Database |
 | JWTAuth | php-open-source-saver/jwt-auth | JWT Authentication |
 | Mailtrap | Sandbox SMTP | Test email delivery |
-| PHPUnit | 11.x | Testing Framework |
+| PHPUnit | 11.x | Testing Framework |  
 
 ---
 
