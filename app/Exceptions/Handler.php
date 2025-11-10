@@ -14,7 +14,7 @@ class Handler extends ExceptionHandler
 {
     public function register(): void
     {
-        // hook custom reporting here if needed.
+       
     }
 
     public function render($request, Throwable $e)
