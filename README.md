@@ -208,8 +208,6 @@ Each error returns a structured JSON response:
 
   Example:
 
-  {
-
     "status": "error",
     
     "message": "Validation failed",
@@ -221,7 +219,6 @@ Each error returns a structured JSON response:
     
       }
 
-  }
 
 
 📬 Mailtrap Integration (SMTP Sandbox)
