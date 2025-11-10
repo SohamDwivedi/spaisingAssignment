@@ -107,11 +107,15 @@ Server will run on:
 👉 http://127.0.0.1:8000
 
 # 🔐 Authentication Endpoints
-  Method	Endpoint	          Description
-  POST	  /api/auth/register	Register a new user
-  POST	  /api/auth/login	    Login and get with JWT token
-  POST	  /api/auth/logout	  Logout user
-  GET	    /api/auth/me	      Get user details with JWT token
+    Method	Endpoint	          Description
+
+    POST	  /api/auth/register	Register a new user
+    
+    POST	  /api/auth/login	    Login and get with JWT token
+    
+    POST	  /api/auth/logout	  Logout user
+    
+    GET	    /api/auth/me	      Get user details with JWT token
 
 🔐 Auth APIs
 
