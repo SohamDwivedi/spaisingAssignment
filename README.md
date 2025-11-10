@@ -228,21 +228,21 @@ Each error returns a structured JSON response:
 
 Order confirmation emails are sent using Mailtrap.
 
-Configure inside .env:
+# Configure inside .env:
 
-MAIL_MAILER=smtp
+  MAIL_MAILER=smtp
 
-MAIL_HOST=sandbox.smtp.mailtrap.io
+  MAIL_HOST=sandbox.smtp.mailtrap.io
 
-MAIL_PORT=2525
+  MAIL_PORT=2525
 
-MAIL_USERNAME=<your-mailtrap-username>
+  MAIL_USERNAME=<your-mailtrap-username>
 
-MAIL_PASSWORD=<your-mailtrap-password>
+  MAIL_PASSWORD=<your-mailtrap-password>
 
-MAIL_FROM_ADDRESS="hello@example.com"
+  MAIL_FROM_ADDRESS="hello@example.com"
 
-MAIL_FROM_NAME="Laravel E-Commerce"
+  MAIL_FROM_NAME="Laravel E-Commerce"
 
 
 # 🧪 Testing
