@@ -31,58 +31,60 @@ It provides a fully functional REST API supporting:
 ## 🚀 Installation & Setup
 
 ### Clone the repository
-```bash
+
 git clone https://github.com/SohamDwivedi/spaisingAssignment.git
 cd backend
 
 Install dependencies
+
 composer install
 
 Copy environment file
 cp .env.example .env
 
-Then update environment variables:
-APP_NAME=Laravel
-APP_ENV=local
-APP_KEY=
-APP_DEBUG=true
-APP_URL=http://127.0.0.1:8000
+Then update environment(.env) variables:
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=spaising
-DB_USERNAME=root
-DB_PASSWORD=
+  APP_NAME=Laravel
+  APP_ENV=local
+  APP_KEY=
+  APP_DEBUG=true
+  APP_URL=http://127.0.0.1:8000
 
-# JWT Auth
-JWT_SECRET=your_generated_secret
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=spaising
+  DB_USERNAME=root
+  DB_PASSWORD=
 
-# Mailtrap (sandbox)
-MAIL_MAILER=smtp
-MAIL_HOST=sandbox.smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=f98e10da9f8a14
-MAIL_PASSWORD=<your-mailtrap-password>
-MAIL_FROM_ADDRESS="hello@example.com"
-MAIL_FROM_NAME="${APP_NAME}"
+  # JWT Auth
+  JWT_SECRET=your_generated_secret
+
+  # Mailtrap (sandbox)
+  MAIL_MAILER=smtp
+  MAIL_HOST=sandbox.smtp.mailtrap.io
+  MAIL_PORT=2525
+  MAIL_USERNAME=<your-mailtrap-username>
+  MAIL_PASSWORD=<your-mailtrap-password>
+  MAIL_FROM_ADDRESS="hello@example.com"
+  MAIL_FROM_NAME="${APP_NAME}"
 
 Generate keys:
 
-php artisan key:generate
-php artisan jwt:secret
+  php artisan key:generate
+  php artisan jwt:secret
 
 Run migrations & seeders
 
-php artisan migrate:fresh --seed
+  php artisan migrate:fresh --seed
 
-This seeds:
+  This seeds:
 
-1 Admin user
+  1 Admin user
 
-4 Regular users
+  4 Regular users
 
-10 Sample products
+  10 Sample products
 
 Start development server
 
