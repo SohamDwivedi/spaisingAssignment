@@ -269,7 +269,7 @@ Order confirmation emails are sent using Mailtrap.
 
 🧑‍💻 Developer Info
 
-Author: Soham
+Author: Soham Dwivedi
 
 Role: Full Stack Web Developer
 
@@ -278,4 +278,4 @@ Experience: 5.8+ years
 
 📄 License
 
-This project was created for demo purpose of skill evaluation.
+This project was created by Soham Dwivedi for demo purpose of skill evaluation.
