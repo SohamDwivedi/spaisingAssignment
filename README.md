@@ -100,12 +100,15 @@ POST	/api/auth/logout	Logout user
 GET	/api/auth/me	Get user details (requires token)
 
 🔐 Auth APIs
+
 Method	Endpoint	Description
 POST	/api/auth/register	Register a new user
 POST	/api/auth/login	Log in a user and issue token
 POST	/api/auth/logout	Log out the authenticated user
 GET	/api/auth/me	Get details of the currently authenticated user
+
 🛒 Cart & Orders (User APIs)
+
 Method	Endpoint	Description
 GET	/api/cart	Get all cart items for the logged-in user
 POST	/api/cart	Add product to cart
@@ -114,11 +117,15 @@ DELETE	/api/cart/items/{productId}	Remove or reduce a product from the cart
 POST	/api/checkout	Checkout and create order, update stock
 GET	/api/orders	Get all orders of the user
 GET	/api/orders/{id}	Get details of a single order
+
 🛍️ Public Product APIs
+
 Method	Endpoint	Description
 GET	/api/public/products	Get paginated list of all products
 GET	/api/public/products/{id}	Get details of a single product
+
 🧑‍💼 Admin Dashboard & Management APIs
+
 Method	Endpoint	Description
 GET	/api/admin/dashboard	Get overall dashboard metrics (users, products, revenue)
 GET	/api/admin/orders	List all orders in the system
@@ -129,7 +136,9 @@ PUT	/api/admin/products/{id}	Update an existing product
 PATCH	/api/admin/products/{id}	Update an existing product (partial)
 DELETE	/api/admin/products/{id}	Delete a product
 GET	/api/admin/users	List all registered users
+
 ⚙️ Utility & Fallback Routes
+
 Method	Endpoint	Description
 GET	/api/{fallbackPlaceholder}	Fallback for undefined API routes
 GET	/storage/{path}	Serve uploaded storage files
