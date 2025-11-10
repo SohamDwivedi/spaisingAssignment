@@ -40,6 +40,7 @@ class AdminProductController extends Controller
             'description' => 'nullable|string',
             'price'       => 'required|numeric|min:0',
             'stock'       => 'required|integer|min:0',
+            'images'      => 'required|string'
         ]);
 
         // Check for existing product with same name + price
@@ -79,6 +80,7 @@ class AdminProductController extends Controller
             'description' => 'nullable|string',
             'price'       => 'sometimes|required|numeric|min:0',
             'stock'       => 'sometimes|required|integer|min:0',
+            'images'      => 'sometimes|required|string'
         ]);
 
         $product->update($validated);

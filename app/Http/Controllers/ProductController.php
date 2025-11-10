@@ -21,7 +21,7 @@ class ProductController extends Controller
                   ->orWhere('description', 'like', "%{$search}%");
         }
 
-        $products = $query->paginate(5);
+        $products = $query->paginate(10);
 
         return ProductResource::collection($products);
     }

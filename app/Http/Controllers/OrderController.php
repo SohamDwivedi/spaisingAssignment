@@ -14,10 +14,10 @@ class OrderController extends Controller
      */
     public function index(Request $request)
     {
-        $orders = Order::with(['orderItems.product'])
+        $orders = Order::with(['items.product'])
             ->where('user_id', $request->user()->id)
             ->orderByDesc('created_at')
-            ->paginate(10);
+            ->paginate(5);
 
         return OrderResource::collection($orders);
     }
@@ -28,7 +28,7 @@ class OrderController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $order = Order::with(['orderItems.product'])
+        $order = Order::with(['items.product'])
             ->where('user_id', $request->user()->id)
             ->findOrFail($id);
 
