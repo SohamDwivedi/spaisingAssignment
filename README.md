@@ -45,9 +45,13 @@ cp .env.example .env
 Then update environment(.env) variables:
 
   APP_NAME=Laravel
+
   APP_ENV=local
+  
   APP_KEY=
+  
   APP_DEBUG=true
+  
   APP_URL=http://127.0.0.1:8000
 
   DB_CONNECTION=mysql
