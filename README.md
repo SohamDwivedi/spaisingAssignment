@@ -157,25 +157,25 @@ Server will run on:
 
 # 🧑‍💼 Admin Dashboard & Management APIs
 
-  Method	Endpoint	                Description
+    Method	Endpoint	                Description
 
-  GET	    /api/admin/dashboard	    Get overall dashboard metrics (users, products, revenue)
-  
-  GET	    /api/admin/orders	        List all orders in the system
-  
-  GET	    /api/admin/orders/{id}	  View details of a specific order
-  
-  GET	    /api/admin/products	      List all products (admin view)
-  
-  POST	  /api/admin/products	      Add a new product
-  
-  PUT	    /api/admin/products/{id}	Update an existing product
-  
-  PATCH	  /api/admin/products/{id}	Update an existing product (partial)
-  
-  DELETE	/api/admin/products/{id}	Delete a product
-  
-  GET	    /api/admin/users	        List all registered users
+    GET	    /api/admin/dashboard	    Get overall dashboard metrics (users, products, revenue)
+    
+    GET	    /api/admin/orders	        List all orders in the system
+    
+    GET	    /api/admin/orders/{id}	  View details of a specific order
+    
+    GET	    /api/admin/products	      List all products (admin view)
+    
+    POST	  /api/admin/products	      Add a new product
+    
+    PUT	    /api/admin/products/{id}	Update an existing product
+    
+    PATCH	  /api/admin/products/{id}	Update an existing product (partial)
+    
+    DELETE	/api/admin/products/{id}	Delete a product
+    
+    GET	    /api/admin/users	        List all registered users
 
 # ⚙️ Utility & Fallback Routes
 
@@ -227,27 +227,27 @@ Order confirmation emails are sent using Mailtrap.
 
 # Configure inside .env:
 
-  MAIL_MAILER=smtp
+    MAIL_MAILER=smtp
 
-  MAIL_HOST=sandbox.smtp.mailtrap.io
+    MAIL_HOST=sandbox.smtp.mailtrap.io
 
-  MAIL_PORT=2525
+    MAIL_PORT=2525
 
-  MAIL_USERNAME=<your-mailtrap-username>
+    MAIL_USERNAME=<your-mailtrap-username>
 
-  MAIL_PASSWORD=<your-mailtrap-password>
+    MAIL_PASSWORD=<your-mailtrap-password>
 
-  MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_ADDRESS="hello@example.com"
 
-  MAIL_FROM_NAME="Laravel E-Commerce"
+    MAIL_FROM_NAME="Laravel E-Commerce"
 
 
 # 🧪 Testing
 
-  php artisan test
+    php artisan test
 
   
-# Covered Tests:
+  Covered Tests:
 
   Successful checkout (happy path)
 
