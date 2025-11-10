@@ -66,24 +66,26 @@ cp .env.example .env
     
     DB_PASSWORD=
 
-  # JWT Auth
-  JWT_SECRET=your_generated_secret
+    MAIL_MAILER=smtp
 
-  # Mailtrap (sandbox)
-  MAIL_MAILER=smtp
-  MAIL_HOST=sandbox.smtp.mailtrap.io
-  MAIL_PORT=2525
-  MAIL_USERNAME=<your-mailtrap-username>
-  MAIL_PASSWORD=<your-mailtrap-password>
-  MAIL_FROM_ADDRESS="hello@example.com"
-  MAIL_FROM_NAME="${APP_NAME}"
+    MAIL_HOST=sandbox.smtp.mailtrap.io
+    
+    MAIL_PORT=2525
+    
+    MAIL_USERNAME=<your-mailtrap-username>
+    
+    MAIL_PASSWORD=<your-mailtrap-password>
+    
+    MAIL_FROM_ADDRESS="hello@example.com"
+    
+    MAIL_FROM_NAME="${APP_NAME}"
 
-Generate keys:
+# Generate keys:
 
   php artisan key:generate
   php artisan jwt:secret
 
-Run migrations & seeders
+# Run migrations & seeders
 
   php artisan migrate:fresh --seed
 
@@ -95,20 +97,21 @@ Run migrations & seeders
 
   10 Sample products
 
-Start development server
+# Start development server
 
-php artisan serve
+  php artisan serve
 
 
 Server will run on:
+
 👉 http://127.0.0.1:8000
 
-🔐 Authentication Endpoints
-Method	Endpoint	          Description
-POST	  /api/auth/register	Register a new user
-POST	  /api/auth/login	    Login and get with JWT token
-POST	  /api/auth/logout	  Logout user
-GET	    /api/auth/me	      Get user details with JWT token
+# 🔐 Authentication Endpoints
+  Method	Endpoint	          Description
+  POST	  /api/auth/register	Register a new user
+  POST	  /api/auth/login	    Login and get with JWT token
+  POST	  /api/auth/logout	  Logout user
+  GET	    /api/auth/me	      Get user details with JWT token
 
 🔐 Auth APIs
 
