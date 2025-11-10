@@ -51,10 +51,15 @@ Then update environment(.env) variables:
   APP_URL=http://127.0.0.1:8000
 
   DB_CONNECTION=mysql
+  
   DB_HOST=127.0.0.1
+  
   DB_PORT=3306
-  DB_DATABASE=spaising
+
+  DB_DATABASE=demo
+  
   DB_USERNAME=root
+  
   DB_PASSWORD=
 
   # JWT Auth
