@@ -117,79 +117,111 @@ Server will run on:
     
     GET	    /api/auth/me	      Get user details with JWT token
 
-🔐 Auth APIs
+# 🔐 Auth APIs
 
-Method	Endpoint	          Description
-POST	  /api/auth/register	Register a new user
-POST	  /api/auth/login	    Log in a user and issue token
-POST	  /api/auth/logout	  Log out the authenticated user
-GET	    /api/auth/me	      Get details of the currently authenticated user
+    Method	Endpoint	          Description
 
-🛒 Cart & Orders (User APIs)
+    POST	  /api/auth/register	Register a new user
 
-Method	Endpoint	                   Description
-GET	    /api/cart	                   Get all cart items for the logged-in user
-POST	  /api/cart	                   Add product to cart
-PATCH	  /api/cart/items/{productId}	 Update quantity of a product in the cart
-DELETE	/api/cart/items/{productId}	 Remove or reduce a product from the cart
-POST	  /api/checkout	               Checkout and create order, update stock
-GET	    /api/orders	                 Get all orders of the user
-GET	    /api/orders/{id}	           Get details of a single order
+    POST	  /api/auth/login	    Log in a user and issue token
+    
+    POST	  /api/auth/logout	  Log out the authenticated user
+    
+    GET	    /api/auth/me	      Get details of the currently authenticated user
 
-🛍️ Public Product APIs
+# 🛒 Cart & Orders (User APIs)
 
-Method	Endpoint	                 Description
-GET	    /api/public/products	     Get paginated list of all products
-GET	    /api/public/products/{id}	 Get details of a single product
+    Method	Endpoint	                   Description
+    
+    GET	    /api/cart	                   Get all cart items for the logged-in user
+    
+    POST	  /api/cart	                   Add product to cart
+    
+    PATCH	  /api/cart/items/{productId}	 Update quantity of a product in the cart
+    
+    DELETE	/api/cart/items/{productId}	 Remove or reduce a product from the cart
+    
+    POST	  /api/checkout	               Checkout and create order, update stock
+    
+    GET	    /api/orders	                 Get all orders of the user
+    
+    GET	    /api/orders/{id}	           Get details of a single order
 
-🧑‍💼 Admin Dashboard & Management APIs
+# 🛍️ Public Product APIs
 
-Method	Endpoint	                Description
-GET	    /api/admin/dashboard	    Get overall dashboard metrics (users, products, revenue)
-GET	    /api/admin/orders	        List all orders in the system
-GET	    /api/admin/orders/{id}	  View details of a specific order
-GET	    /api/admin/products	      List all products (admin view)
-POST	  /api/admin/products	      Add a new product
-PUT	    /api/admin/products/{id}	Update an existing product
-PATCH	  /api/admin/products/{id}	Update an existing product (partial)
-DELETE	/api/admin/products/{id}	Delete a product
-GET	    /api/admin/users	        List all registered users
+    Method	Endpoint	                 Description
 
-⚙️ Utility & Fallback Routes
+    GET	    /api/public/products	     Get paginated list of all products
+    
+    GET	    /api/public/products/{id}	 Get details of a single product
 
-Method	Endpoint	                  Description
-GET	    /api/{fallbackPlaceholder}	Fallback for undefined API routes
-GET	    /up	Laravel health check endpoint
+# 🧑‍💼 Admin Dashboard & Management APIs
+
+  Method	Endpoint	                Description
+
+  GET	    /api/admin/dashboard	    Get overall dashboard metrics (users, products, revenue)
+  
+  GET	    /api/admin/orders	        List all orders in the system
+  
+  GET	    /api/admin/orders/{id}	  View details of a specific order
+  
+  GET	    /api/admin/products	      List all products (admin view)
+  
+  POST	  /api/admin/products	      Add a new product
+  
+  PUT	    /api/admin/products/{id}	Update an existing product
+  
+  PATCH	  /api/admin/products/{id}	Update an existing product (partial)
+  
+  DELETE	/api/admin/products/{id}	Delete a product
+  
+  GET	    /api/admin/users	        List all registered users
+
+# ⚙️ Utility & Fallback Routes
+
+    Method	Endpoint	                  Description
+    
+    GET	    /api/{fallbackPlaceholder}	Fallback for undefined API routes
+    
+    GET	    /up	Laravel health check endpoint
 
 
 
 
-Checkout Flow
+# Checkout Flow
 
-Validates stock quantity
+  Validates stock quantity
 
-Creates Order and OrderItem records
+  Creates Order and OrderItem records
 
-Decrements stock
+  Decrements stock
 
-Clears cart
+  Clears cart
 
-Sends confirmation email (via Mailtrap)
+  Sends confirmation email (via Mailtrap)
 
 
-All exceptions are globally handled inside bootstrap/app.php
+All exceptions are globally handled inside 
+  bootstrap/app.php
+
 Each error returns a structured JSON response:
 
-Example:
+  Example:
 
-{
-  "status": "error",
-  "message": "Validation failed",
-  "errors": 
-    {
-      "email": ["The email field is required."]
-    }
-}
+  {
+
+    "status": "error",
+    
+    "message": "Validation failed",
+    
+    "errors": 
+      {
+    
+        "email": ["The email field is required."]
+    
+      }
+
+  }
 
 
 📬 Mailtrap Integration (SMTP Sandbox)
@@ -199,39 +231,45 @@ Order confirmation emails are sent using Mailtrap.
 Configure inside .env:
 
 MAIL_MAILER=smtp
+
 MAIL_HOST=sandbox.smtp.mailtrap.io
+
 MAIL_PORT=2525
-MAIL_USERNAME=f98e10da9f8a14
+
+MAIL_USERNAME=<your-mailtrap-username>
+
 MAIL_PASSWORD=<your-mailtrap-password>
+
 MAIL_FROM_ADDRESS="hello@example.com"
+
 MAIL_FROM_NAME="Laravel E-Commerce"
 
 
-🧪 Testing
+# 🧪 Testing
 
-Run all tests using:
+  php artisan test
 
-php artisan test
+  
+# Covered Tests:
 
+  Successful checkout (happy path)
 
-✅ Covered Tests:
+  Failed checkout (stock insufficient)
 
-Successful checkout (happy path)
+  Expected Output:
 
-Failed checkout (stock insufficient)
-
-Expected Output:
-
-PASS  Tests\Feature\OrderTest
-✓ user can checkout successfully
-✓ checkout fails when stock is insufficient
+  PASS  Tests\Feature\OrderTest
+  ✓ user can checkout successfully
+  ✓ checkout fails when stock is insufficient
 
 
 
 🧑‍💻 Developer Info
 
 Author: Soham
+
 Role: Full Stack Web Developer
+
 Experience: 5.8+ years
 
 
