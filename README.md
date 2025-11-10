@@ -32,15 +32,18 @@ It provides a fully functional REST API supporting:
 
 ### Clone the repository
 
-git clone https://github.com/SohamDwivedi/spaisingAssignment.git
-cd backend
+    git clone https://github.com/SohamDwivedi/spaisingAssignment.git
+
+  Then
+    
+    cd backend
 
 Install dependencies
 
-composer install
+    composer install
 
 Copy environment file
-cp .env.example .env
+    cp .env.example .env
 
 # update environment(.env) variables:
 
@@ -90,7 +93,7 @@ cp .env.example .env
 
 # Run migrations & seeders
 
-  php artisan migrate:fresh --seed
+    php artisan migrate:fresh --seed
 
   This seeds:
 
@@ -102,7 +105,7 @@ cp .env.example .env
 
 # Start development server
 
-  php artisan serve
+    php artisan serve
 
 
 Server will run on:
