@@ -42,29 +42,29 @@ composer install
 Copy environment file
 cp .env.example .env
 
-Then update environment(.env) variables:
+# update environment(.env) variables:
 
-  APP_NAME=Laravel
+    APP_NAME=Laravel
 
-  APP_ENV=local
-  
-  APP_KEY=
-  
-  APP_DEBUG=true
-  
-  APP_URL=http://127.0.0.1:8000
+    APP_ENV=local
+    
+    APP_KEY=
+    
+    APP_DEBUG=true
+    
+    APP_URL=http://127.0.0.1:8000
 
-  DB_CONNECTION=mysql
-  
-  DB_HOST=127.0.0.1
-  
-  DB_PORT=3306
+    DB_CONNECTION=mysql
+    
+    DB_HOST=127.0.0.1
+    
+    DB_PORT=3306
 
-  DB_DATABASE=demo
-  
-  DB_USERNAME=root
-  
-  DB_PASSWORD=
+    DB_DATABASE=demo
+    
+    DB_USERNAME=root
+    
+    DB_PASSWORD=
 
   # JWT Auth
   JWT_SECRET=your_generated_secret
