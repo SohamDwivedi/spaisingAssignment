@@ -1,4 +1,4 @@
-# 🛒 Full-Stack Technical Test — Backend (Laravel 11 + MySQL + JWT)
+# 🛒 Full-Stack — Backend (Laravel 11 + MySQL + JWT)
 
 ## 📘 Overview
 This repository contains the **backend** implementation of the Full-Stack Technical Test built with **Laravel 11 (PHP 8.3)** and **MySQL**.  
@@ -93,56 +93,55 @@ Server will run on:
 👉 http://127.0.0.1:8000
 
 🔐 Authentication Endpoints
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Login & get JWT token
-POST	/api/auth/logout	Logout user
-GET	/api/auth/me	Get user details (requires token)
+Method	Endpoint	          Description
+POST	  /api/auth/register	Register a new user
+POST	  /api/auth/login	    Login and get with JWT token
+POST	  /api/auth/logout	  Logout user
+GET	    /api/auth/me	      Get user details with JWT token
 
 🔐 Auth APIs
 
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Log in a user and issue token
-POST	/api/auth/logout	Log out the authenticated user
-GET	/api/auth/me	Get details of the currently authenticated user
+Method	Endpoint	          Description
+POST	  /api/auth/register	Register a new user
+POST	  /api/auth/login	    Log in a user and issue token
+POST	  /api/auth/logout	  Log out the authenticated user
+GET	    /api/auth/me	      Get details of the currently authenticated user
 
 🛒 Cart & Orders (User APIs)
 
-Method	Endpoint	Description
-GET	/api/cart	Get all cart items for the logged-in user
-POST	/api/cart	Add product to cart
-PATCH	/api/cart/items/{productId}	Update quantity of a product in the cart
-DELETE	/api/cart/items/{productId}	Remove or reduce a product from the cart
-POST	/api/checkout	Checkout and create order, update stock
-GET	/api/orders	Get all orders of the user
-GET	/api/orders/{id}	Get details of a single order
+Method	Endpoint	                   Description
+GET	    /api/cart	                   Get all cart items for the logged-in user
+POST	  /api/cart	                   Add product to cart
+PATCH	  /api/cart/items/{productId}	 Update quantity of a product in the cart
+DELETE	/api/cart/items/{productId}	 Remove or reduce a product from the cart
+POST	  /api/checkout	               Checkout and create order, update stock
+GET	    /api/orders	                 Get all orders of the user
+GET	    /api/orders/{id}	           Get details of a single order
 
 🛍️ Public Product APIs
 
-Method	Endpoint	Description
-GET	/api/public/products	Get paginated list of all products
-GET	/api/public/products/{id}	Get details of a single product
+Method	Endpoint	                 Description
+GET	    /api/public/products	     Get paginated list of all products
+GET	    /api/public/products/{id}	 Get details of a single product
 
 🧑‍💼 Admin Dashboard & Management APIs
 
-Method	Endpoint	Description
-GET	/api/admin/dashboard	Get overall dashboard metrics (users, products, revenue)
-GET	/api/admin/orders	List all orders in the system
-GET	/api/admin/orders/{id}	View details of a specific order
-GET	/api/admin/products	List all products (admin view)
-POST	/api/admin/products	Add a new product
-PUT	/api/admin/products/{id}	Update an existing product
-PATCH	/api/admin/products/{id}	Update an existing product (partial)
+Method	Endpoint	                Description
+GET	    /api/admin/dashboard	    Get overall dashboard metrics (users, products, revenue)
+GET	    /api/admin/orders	        List all orders in the system
+GET	    /api/admin/orders/{id}	  View details of a specific order
+GET	    /api/admin/products	      List all products (admin view)
+POST	  /api/admin/products	      Add a new product
+PUT	    /api/admin/products/{id}	Update an existing product
+PATCH	  /api/admin/products/{id}	Update an existing product (partial)
 DELETE	/api/admin/products/{id}	Delete a product
-GET	/api/admin/users	List all registered users
+GET	    /api/admin/users	        List all registered users
 
 ⚙️ Utility & Fallback Routes
 
-Method	Endpoint	Description
-GET	/api/{fallbackPlaceholder}	Fallback for undefined API routes
-GET	/storage/{path}	Serve uploaded storage files
-GET	/up	Laravel health check endpoint
+Method	Endpoint	                  Description
+GET	    /api/{fallbackPlaceholder}	Fallback for undefined API routes
+GET	    /up	Laravel health check endpoint
 
 
 
@@ -159,19 +158,6 @@ Clears cart
 
 Sends confirmation email (via Mailtrap)
 
-ADMIN API's
-
-| Method   | Endpoint                   | Description                           |
-| -------- | -------------------------- | ------------------------------------- |
-| `GET`    | `/api/admin/dashboard`     | Get totals (users, products, revenue) |
-| `GET`    | `/api/admin/products`      | Get all products                      |
-| `POST`   | `/api/admin/products`      | Create new product                    |
-| `PATCH`  | `/api/admin/products/{id}` | Update product                        |
-| `DELETE` | `/api/admin/products/{id}` | Delete product                        |
-| `GET`    | `/api/admin/orders`        | View all orders                       |
-| `GET`    | `/api/admin/orders/{id}`   | Get single order details              |
-| `GET`    | `/api/admin/users`         | List all users                        |
-
 
 All exceptions are globally handled inside bootstrap/app.php
 Each error returns a structured JSON response:
@@ -181,9 +167,10 @@ Example:
 {
   "status": "error",
   "message": "Validation failed",
-  "errors": {
-    "email": ["The email field is required."]
-  }
+  "errors": 
+    {
+      "email": ["The email field is required."]
+    }
 }
 
 
@@ -226,9 +213,8 @@ PASS  Tests\Feature\OrderTest
 🧑‍💻 Developer Info
 
 Author: Soham
-Role: Software Engineer
-Experience: 4.5+ years
-Expertise: Laravel, React, Angular, Node.js, AWS, MySQL, MongoDB, GraphQL, S3, EC2, Lambda, DynamoDB, RDS, SQS
+Role: Softwae Engineer
+Experience: 5.8+ years
 
 
 📄 License
