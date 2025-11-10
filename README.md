@@ -82,8 +82,11 @@ cp .env.example .env
 
 # Generate keys:
 
-  php artisan key:generate
-  php artisan jwt:secret
+    php artisan key:generate
+  
+  Then
+
+    php artisan jwt:secret
 
 # Run migrations & seeders
 
